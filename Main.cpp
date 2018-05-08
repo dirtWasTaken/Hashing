@@ -1,7 +1,13 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <algorithm>
 
+
+/*************************************************************************************
+Hashing function that takes the string inputed in the main function (In this case "test")
+and puts it through arithmitic in a for loop and returns the value.
+**************************************************************************************/
 unsigned int SHF(std::string input)
 {
 	unsigned int init = 124564352;
@@ -16,6 +22,10 @@ unsigned int SHF(std::string input)
 	return hash;
 }
 
+/*************************************************************************************
+takes the string input from main ("test") and streams it through the SHF function to 
+turn it into a hash code 
+**************************************************************************************/
 std::string toHex(unsigned int input)
 {
 	std::string HexHash;
@@ -26,6 +36,10 @@ std::string toHex(unsigned int input)
 	return HexHash;
 }
 
+/*************************************************************************************
+main fuction simply outputs whatever you wish to input into the hashing algorithm
+as a hash code
+**************************************************************************************/
 
 int main()
 {
